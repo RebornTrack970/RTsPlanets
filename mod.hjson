@@ -1,0 +1,8 @@
+name: planetsmod
+displayName: RTs Planets
+description: Adds planets
+author: RTOmega
+version: 0.1
+main: h
+minGameVersion: 120
+repo: RebornTrack970/planetsmod
