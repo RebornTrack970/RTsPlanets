@@ -15,13 +15,13 @@ Events.on(ClientLoadEvent, () => {
         [Blocks.grass, Blocks.grass, Blocks.grass, Blocks.dirt, Blocks.grass, Blocks.dirt, Blocks.iceSnow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice],
         [Blocks.grass, Blocks.grass, Blocks.snow, Blocks.ice, Blocks.iceSnow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice]
     ];
-    const hhhGenerator = extend(SerpuloPlanetGenerator, {
+    const hhhaGenerator = extend(SerpuloPlanetGenerator, {
         getBlock(p){
             this.arr = arrrrs;
             this.super$getBlock(p);
         }
     });
-    hhhGenerator.arr = arrrrs;
+    hhhaGenerator.arr = arrrrs;
 
 
 
