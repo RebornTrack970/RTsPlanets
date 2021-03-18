@@ -1,19 +1,19 @@
 Events.on(ClientLoadEvent, () => {
 
     var arrs = [
-        [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone],
-        [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone, Blocks.stone],
-        [Blocks.water, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.salt, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone, Blocks.stone],
-        [Blocks.water, Blocks.sandWater, Blocks.sand, Blocks.salt, Blocks.salt, Blocks.salt, Blocks.sand, Blocks.stone, Blocks.stone, Blocks.stone, Blocks.snow, Blocks.iceSnow, Blocks.ice],
-        [Blocks.deepwater, Blocks.water, Blocks.sandWater, Blocks.sand, Blocks.salt, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.ice],
-        [Blocks.deepwater, Blocks.water, Blocks.sandWater, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.iceSnow, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.snow, Blocks.ice],
-        [Blocks.deepwater, Blocks.sandWater, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.grass, Blocks.snow, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.ice, Blocks.snow, Blocks.ice],
-        [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.hotrock, Blocks.grass, Blocks.ice, Blocks.snow, Blocks.ice, Blocks.ice],
-        [Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.dirt, Blocks.snow, Blocks.grass, Blocks.grass, Blocks.ice, Blocks.snow, Blocks.ice, Blocks.ice],
-        [Blocks.grass, Blocks.grass, Blocks.grass, Blocks.dirt, Blocks.ice, Blocks.ice, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice],
-        [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.ice, Blocks.ice, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice],
-        [Blocks.grass, Blocks.grass, Blocks.grass, Blocks.dirt, Blocks.grass, Blocks.dirt, Blocks.iceSnow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice],
-        [Blocks.grass, Blocks.grass, Blocks.snow, Blocks.ice, Blocks.iceSnow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice, Blocks.ice]
+        [Blocks.water],
+        [Blocks.sand],
+        [Blocks.grass],
+        [Blocks.duo],
+        [Blocks.duo],
+        [Blocks.duo],
+        [Blocks.duo],
+        [Blocks.ice],
+        [Blocks.snow],
+        [Blocks.duo],
+        [Blocks.router],
+        [Blocks.grass],
+        [Blocks.stone]
     ];
     const hhhGenerator = extend(SerpuloPlanetGenerator, {
         getBlock(p){
@@ -25,30 +25,30 @@ Events.on(ClientLoadEvent, () => {
 
 
 
-    const ananyum = new Planet("ananyum", Planets.sun, 2, 1);
-    ananyum.generator = hhhGenerator;
-    ananyum.mesh = new HexMesh(ananyum, 3);
-    ananyum.orbitRadius = 5;
-    ananyum.orbitTime = 1.5 * 60;
-    ananyum.rotateTime = 30;
-    ananyum.bloom = true;
-    ananyum.accessible = true;
-    ananyum.startSector = 1;
-    ananyum.hasAtmosphere = true;
-    ananyum.atmosphereColor = Liquids.oil.color;
-    ananyum.atmosphereRadIn = 0.1;
-    ananyum.atmosphereRadOut = 0.5;
-    ananyum.alwaysUnlocked = true;
-    ananyum.localizedName = "Yakko";
+    const anotherplanet = new Planet("anotherplanet", Planets.sun, 1, 0.5);
+    anotherplanet.generator = hhhGenerator;
+    anotherplanet.mesh = new HexMesh(anotherplanet, 1);
+    anotherplanet.orbitRadius = 7;
+    anotherplanet.orbitTime = 5 * 60;
+    anotherplanet.rotateTime = 60;
+    anotherplanet.bloom = true;
+    anotherplanet.accessible = true;
+    anotherplanet.startSector = 1;
+    anotherplanet.hasAtmosphere = true;
+    anotherplanet.atmosphereColor = Liquids.cryofluid.color;
+    anotherplanet.atmosphereRadIn = 0.1;
+    anotherplanet.atmosphereRadOut = 0.8;
+    anotherplanet.alwaysUnlocked = true;
+    anotherplanet.localizedName = "Duo 3000";
 
 
 
 
-    const antarcticaSurvival = new SectorPreset("fortress", ananyum, 1);
-    antarcticaSurvival.captureWave = 30;
-    antarcticaSurvival.localizedName = "Fortress";
-    antarcticaSurvival.difficulty = 6;
-    antarcticaSurvival.alwaysUnlocked = true;
+    const yuyu = new SectorPreset("maze", anotherplanet, 1);
+    yuyu.captureWave = 100;
+    yuyu.localizedName = "Maze";
+    yuyu.difficulty = 9;
+    yuyu.alwaysUnlocked = true;
 
 
 });
