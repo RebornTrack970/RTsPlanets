@@ -1,6 +1,6 @@
 Events.on(ClientLoadEvent, () => {
 
-    var arrs = [
+    var arrrs = [
         [Blocks.water],
         [Blocks.sand],
         [Blocks.grass],
@@ -17,11 +17,11 @@ Events.on(ClientLoadEvent, () => {
     ];
     const hhhGenerator = extend(SerpuloPlanetGenerator, {
         getBlock(p){
-            this.arr = arrs;
+            this.arr = arrrs;
             this.super$getBlock(p);
         }
     });
-    hhhGenerator.arr = arrs;
+    hhhGenerator.arr = arrrs;
 
 
 
