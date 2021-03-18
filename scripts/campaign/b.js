@@ -26,7 +26,7 @@ Events.on(ClientLoadEvent, () => {
 
 
     const anotherplanet = new Planet("anotherplanet", Planets.sun, 1, 0.5);
-    anotherplanet.generator = hhhGenerator;
+    anotherplanet.generator = hhhbGenerator;
     anotherplanet.mesh = new HexMesh(anotherplanet, 1);
     anotherplanet.orbitRadius = 7;
     anotherplanet.orbitTime = 5 * 60;
