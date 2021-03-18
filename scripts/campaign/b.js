@@ -15,13 +15,13 @@ Events.on(ClientLoadEvent, () => {
         [Blocks.grass],
         [Blocks.stone]
     ];
-    const hhhGenerator = extend(SerpuloPlanetGenerator, {
+    const hhhbGenerator = extend(SerpuloPlanetGenerator, {
         getBlock(p){
             this.arr = arrrs;
             this.super$getBlock(p);
         }
     });
-    hhhGenerator.arr = arrrs;
+    hhhbGenerator.arr = arrrs;
 
 
 
