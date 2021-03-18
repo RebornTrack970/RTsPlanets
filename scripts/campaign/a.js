@@ -26,7 +26,7 @@ Events.on(ClientLoadEvent, () => {
 
 
     const ananyum = new Planet("ananyum", Planets.sun, 2, 1);
-    ananyum.generator = hhhGenerator;
+    ananyum.generator = hhhaGenerator;
     ananyum.mesh = new HexMesh(ananyum, 3);
     ananyum.orbitRadius = 5;
     ananyum.orbitTime = 1.5 * 60;
