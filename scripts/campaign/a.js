@@ -1,6 +1,6 @@
 Events.on(ClientLoadEvent, () => {
 
-    var arrs = [
+    var arrrrs = [
         [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone],
         [Blocks.water, Blocks.grass, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone, Blocks.stone],
         [Blocks.water, Blocks.grass, Blocks.grass, Blocks.sand, Blocks.salt, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.grass, Blocks.stone, Blocks.stone, Blocks.stone],
@@ -17,11 +17,11 @@ Events.on(ClientLoadEvent, () => {
     ];
     const hhhGenerator = extend(SerpuloPlanetGenerator, {
         getBlock(p){
-            this.arr = arrs;
+            this.arr = arrrrs;
             this.super$getBlock(p);
         }
     });
-    hhhGenerator.arr = arrs;
+    hhhGenerator.arr = arrrrs;
 
 
 
